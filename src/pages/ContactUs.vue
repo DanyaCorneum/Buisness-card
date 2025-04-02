@@ -6,7 +6,8 @@ import { ref } from "vue";
 const personal = ref([]);
 axios
   .get("http://localhost:3001/about_us")
-  .then((res) => (personal.value = res.data));
+  .then((res) => (personal.value = res.data))
+  .catch(console.log);
 </script>
 
 <template>
