@@ -1,26 +1,47 @@
 <script setup>
-import BackButton from "@/components/BackButton.vue";
-import NavButton from "@/components/NavButton.vue";
-const ourTeam = [
-  { name: "Bob", phone: "8-999-999-99-99" },
-  { name: "Alice", phone: "8-999-999-99-99" },
-  { name: "John", phone: "8-999-999-99-99" },
-];
+import InfoBlock from "@/widgets/InfoBlock.vue";
+import axios from "axios";
+import { ref } from "vue";
+
+const personal = ref([]);
+axios
+  .get("http://localhost:3001/about_us")
+  .then((res) => (personal.value = res.data));
 </script>
 
 <template>
-  <RouterView />
   <div class="contact-us">
-    <h1>Contact us</h1>
-    <div v-for:="i in ourTeam">{{ `${i.name} --- ${i.phone}` }}</div>
+    <InfoBlock v-for="persona in personal" class-name="person">
+      <template #header
+        ><h3>
+          {{ persona.name }}
+        </h3></template
+      >
+      <template #main>
+        <p>
+          {{ persona.description }}
+        </p>
+      </template>
+      <template #footer>
+        <p>
+          {{ persona.number }}
+        </p>
+      </template>
+    </InfoBlock>
   </div>
-  <br />
-  <BackButton />
-  <NavButton link="/contact-us/login">Login</NavButton>
 </template>
 
-<style scoped lang="scss">
+<style lang="scss">
+@import "../assets/main.scss";
 .contact-us {
-  color: rgb(166, 191, 145);
+  margin: 50px;
+  .person {
+    border: 2px solid $green;
+    width: 30%;
+    margin: 0 auto;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    color: $green;
+  }
 }
 </style>

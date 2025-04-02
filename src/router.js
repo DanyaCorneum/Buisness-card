@@ -4,23 +4,16 @@ import Home from "./pages/Home.vue";
 import About from "./pages/About.vue";
 import ContuctUs from "./pages/ContactUs.vue";
 import Products from "./pages/Products.vue";
-import Login from "./pages/Login.vue";
+import Wishes from "./pages/Wishes.vue";
+import News from "./pages/News.vue";
 
 const routes = [
-  { path: "/", component: Home},
+  { path: "/", component: Home },
   { path: "/about:", component: About },
-  {
-    path: "/contact-us",
-    component: ContuctUs,
-    children: [
-      {
-        path: "login",
-        component: Login,
-        name: "login",
-      },
-    ],
-  },
+  { path: "/contact-us",component: ContuctUs,},
   { path: "/products", component: Products },
+  { path: "/news", component: News },
+  { path: "/wishes", component: Wishes },
 ];
 
 export const router = createRouter({

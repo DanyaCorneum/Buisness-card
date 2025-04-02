@@ -1,36 +1,46 @@
 <script setup>
 import InfoBlock from "@/widgets/InfoBlock.vue";
+import axios from "axios";
+import { ref } from "vue";
+
+const mainHeader = ref("Sorry, no content");
+const mainText = ref("Sorry, no content");
+const mainFooter = ref("Sorry, no content");
+const features = ref([]);
+
+axios
+  .get(`http://localhost:3001/home`)
+  .then((res) => (mainHeader.value = res.data[0].content));
+axios
+  .get(`http://localhost:3001/home`)
+  .then((res) => (mainText.value = res.data[1].content));
+axios
+  .get(`http://localhost:3001/home`)
+  .then((res) => (mainFooter.value = res.data[2].content));
+axios
+  .get(`http://localhost:3001/home`)
+  .then((res) => (features.value = res.data[3].content));
 </script>
 
 <template>
   <div class="home">
     <InfoBlock class-name="home-info">
       <template #header>
-        <h3>Lorem ipsum dolor sit amet.</h3>
+        <h3>{{ mainHeader }}</h3>
       </template>
       <template #main>
         <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam,
-          reprehenderit! Odio esse facilis magni temporibus sapiente quo
-          consequatur earum cum? Nemo, rem? Quidem, nobis. Aut tenetur rerum
-          minima laboriosam non.
+          {{ mainText }}
         </p>
       </template>
       <template #footer>
-        <p>Lorem ipsum dolor sit amet.</p>
+        <p>{{ mainFooter }}</p>
       </template>
     </InfoBlock>
     <InfoBlock class-name="other">
       <template #main>
         <ul>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
-          <li>1</li>
+          <li v-for="item in features">{{ item !== undefined ? item : "SORRY" }}</li>
         </ul>
       </template>
     </InfoBlock>
@@ -48,14 +58,22 @@ import InfoBlock from "@/widgets/InfoBlock.vue";
   .home-info {
     background-color: $green;
     width: 40%;
-    height: 600px;
     display: flex;
+    color: $dark-green;
+    padding: 10px;
     flex-direction: column;
+    border-radius: 10px;
     & * {
       text-align: start;
     }
   }
   .other {
+    width: 40%;
+    color: $green;
+    border: 2px solid $green;
+    border-radius: 10px;
+    text-align: start;
+    padding: 10px;
   }
 }
 </style>

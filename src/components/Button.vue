@@ -5,7 +5,7 @@ const props = defineProps({
 </script>
 
 <template>
-  <button :class="props.className">
+  <button @click="onClick" :class="props.className">
     <slot />
   </button>
 </template>

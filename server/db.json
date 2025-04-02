@@ -1,0 +1,113 @@
+{
+  "home": [
+    {
+      "id": "1",
+      "header": "Welcome to Our Website",
+      "content": "Explore the best services we have to offer."
+    },
+    {
+      "id": "2",
+      "header": "Latest News",
+      "content": "Stay updated with our latest news and announcements."
+    },
+    {
+      "id": "3",
+      "header": "Contact Us",
+      "content": "Get in touch with us for any inquiries."
+    },
+    {
+      "id": "4",
+      "header": "features",
+      "content": [
+        "User Authentication",
+        "Responsive Design",
+        "Data Encryption",
+        "API Integration",
+        "Role Management",
+        "Performance Analytics",
+        "Push Notifications",
+        "Content Management",
+        "Multi-Language Support",
+        "Cloud Storage"
+      ]
+    }
+  ],
+  "about_us": [
+    {
+      "id": "1",
+      "name": "John Doe",
+      "number": "+1234567890",
+      "description": "Head of Operations"
+    },
+    {
+      "id": "2",
+      "name": "Jane Smith",
+      "number": "+0987654321",
+      "description": "Marketing Specialist"
+    },
+    {
+      "id": "3",
+      "name": "Alice Johnson",
+      "number": "+1122334455",
+      "description": "Chief Financial Officer"
+    }
+  ],
+  "whishes": [
+    {
+      "id": "b3c0",
+      "content": "asdfasdf"
+    },
+    {
+      "id": "0c79",
+      "content": " adsf"
+    },
+    {
+      "id": "53ff",
+      "content": " asdf"
+    },
+    {
+      "id": "e39a",
+      "content": " ads"
+    },
+    {
+      "id": "b53a",
+      "content": " asd"
+    },
+    {
+      "id": "c1ce",
+      "content": " asd"
+    },
+    {
+      "id": "1743",
+      "content": " asd"
+    },
+    {
+      "id": "4fb4",
+      "content": " s"
+    },
+    {
+      "id": "c72b",
+      "content": " s"
+    },
+    {
+      "id": "9633",
+      "content": " f"
+    },
+    {
+      "id": "1621",
+      "content": " g"
+    },
+    {
+      "id": "ae4c",
+      "content": " a"
+    },
+    {
+      "id": "ddeb",
+      "content": " asdf"
+    },
+    {
+      "id": "d3d6",
+      "content": " asdf"
+    }
+  ]
+}

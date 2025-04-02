@@ -12,13 +12,14 @@ import NavButton from "../components/NavButton.vue";
       <NavButton :link="`/contact-us`" :class="`nav-button`"
         >contuct us</NavButton
       >
-      <NavButton :link="`/contact-us`" :class="`nav-button`">news</NavButton>
+      <NavButton :link="`/news`" :class="`nav-button`">news</NavButton>
+      <NavButton :link="`/wishes`" :class="`nav-button`">wishes</NavButton>
     </div>
   </div>
 </template>
 
 <style lang="scss">
-@import "../assets/_main.scss";
+@import "../assets/main.scss";
 
 .navigation {
   display: flex;

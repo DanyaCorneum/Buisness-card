@@ -1,16 +1,21 @@
 <script setup>
-import BackButton from "@/components/BackButton.vue";
+
 </script>
 
 <template>
   <div class="about">
     <h1>About</h1>
-    <p>Lorem ipsum dolor sit amet.</p>
+    
   </div>
-  <BackButton />
 </template>
 
 <style lang="scss">
+.person {
+  border: 2px solid black;
+  width: 30%;
+  margin: 0 auto;
+  margin-bottom: 20px;
+}
 .about {
   color: rgb(166, 191, 145);
 }
