@@ -1,5 +1,4 @@
 <script setup>
-import Button from "@/components/Button.vue";
 import { ref } from "vue";
 import axios from "axios";
 
@@ -7,14 +6,18 @@ const whish = ref("");
 const listOfWhishes = ref([]);
 axios
   .get("http://localhost:3001/whishes/")
-  .then((res) => (listOfWhishes.value = res.data)).catch(console.log);
+  .then((res) => (listOfWhishes.value = res.data))
+  .catch(console.log);
 
 function addWhish(e) {
-  axios.post("http://localhost:3001/whishes/", { content: whish.value }).catch(console.log);
+  axios
+    .post("http://localhost:3001/whishes/", { content: whish.value })
+    .catch(console.log);
 
   axios
     .get("http://localhost:3001/whishes/")
-    .then((res) => (listOfWhishes.value = res.data)).catch(console.log);
+    .then((res) => (listOfWhishes.value = res.data))
+    .catch(console.log);
 
   whish.value = " ";
 }
