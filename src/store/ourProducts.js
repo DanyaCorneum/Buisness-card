@@ -27,6 +27,8 @@ export const useProductStorage = defineStore("products", {
     getProducts: (state) => state.products,
   },
   actions: {
-    addProduct: (item) => this.state.products.append(item),
+    addProduct(item) {
+      this.products.push(item);
+    },
   },
 });

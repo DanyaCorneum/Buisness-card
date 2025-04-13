@@ -11,11 +11,13 @@ const props = defineProps({
 </template>
 
 <style lang="scss">
+@import "/src/assets/main.scss";
 button {
-  background-color: rgb(91, 98, 92);
+  background-color: $green;
   border: none;
-  color: rgb(0, 0, 0);
-  width: 100px;
+  color: $dark-green;
+  width: 100%;
+  max-width: 200px;
   height: 50px;
   font-size: 1.2rem;
   border-radius: 10px;
